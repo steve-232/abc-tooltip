@@ -1,0 +1,99 @@
+.abc-tooltip {
+  position: absolute;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.abc-tooltip-box {
+  position: relative;
+  padding: 8px 14px;
+  color: #fff;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+}
+
+.abc-tooltip-triangle-body {
+  width: 16px;
+  height: 8px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+}
+
+.abc-tooltip-triangle {
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+}
+
+.abc-tooltip-triangle.abc-tooltip-p-top {
+  border-top-color: rgba(0, 0, 0, 0.8);
+}
+
+.abc-tooltip-triangle.abc-tooltip-p-bottom {
+  border-bottom-color: rgba(0, 0, 0, 0.8);
+}
+
+.abc-tooltip-p-top {
+  padding-bottom: 8px;
+}
+
+.abc-tooltip-p-top .abc-tooltip-triangle-body {
+  bottom: 0;
+}
+
+.abc-tooltip-p-top .abc-tooltip-triangle {
+  border-top-color: rgba(0, 0, 0, 0.8);
+}
+
+.abc-tooltip-p-bottom {
+  padding-top: 8px;
+}
+
+.abc-tooltip-p-bottom .abc-tooltip-triangle-body {
+  top: 0;
+}
+
+.abc-tooltip-p-bottom .abc-tooltip-triangle {
+  border-bottom-color: rgba(0, 0, 0, 0.8);
+  margin-top: -8px;
+}
+
+.abc-tooltip-p-left {
+  padding-right: 8px;
+}
+
+.abc-tooltip-p-left .abc-tooltip-triangle-body {
+  width: 8px;
+  height: 16px;
+  right: 0;
+  left: auto;
+  margin: none;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.abc-tooltip-p-left .abc-tooltip-triangle {
+  border-left-color: rgba(0, 0, 0, 0.8);
+}
+
+.abc-tooltip-p-right {
+  padding-left: 8px;
+}
+
+.abc-tooltip-p-right .abc-tooltip-triangle-body {
+  width: 8px;
+  height: 16px;
+  left: -8px;
+  right: auto;
+  margin: none;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.abc-tooltip-p-right .abc-tooltip-triangle {
+  border-right-color: rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>ABC Tooltip - Demo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="./demo.css">
+	<link rel="stylesheet" href="./abc-tooltip.css">
+</head>
+<body>
+	<div class="main">
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulam  <span id="tooltip-1" class="info">i</span> ex dolor, faucibus in pulvinar at, tincidunt sit amet nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean ultricies pellentesque massa, a fermentum risus venenatis et. Vestibulum quam justo, aliquet ut nulla id, pretium commodo enim. Nulla elementum leo enim, at laoreet purus ultricies non. Praesent ut nulla sed justo semper ultricies in et mauris. Integer vel congue velit, id maximus lorem. Fusce vitae elit mi. Vivamus ac condimentum nisl.
+		</p>
+		<p>
+			Donec vel tortor vehicula, egestas sapien quis, accumsan erat. Nam pulvinar porta dapibus <span id="tooltip-2" class="info">i</span>. Nulla eget convallis urna. Quisque luctus venenatis fermentum. Nunc faucibus et sapien a imperdiet. Morbi eget convallis nibh. Nam sit amet magna neque. In hac habitasse platea dictumst. Aenean vestibulum neque vel tellus hendrerit malesuada. Vivamus semper iaculis metus, sed posuere arcu ultricies a. 
+		</p>
+
+		<p>
+			Vestibulum dictum risus a placerat dignissim. Donec vel arcu enim. Maecenas 
+			<span class="info" data-abc-tt-content="<b>Vivamus pharetra augue et ipsum tincidunt</b>" data-abc-tt-html="true" data-abc-tt-position="left" data-abc-tt-event="click" data-abc-tt-gap="10">i</span> nec nisi pulvinar, rutrum purus sit amet, cursus est. Nullam tempus leo ac orci pharetra ultrices. Suspendisse vel libero vitae eros auctor vulputate. Etiam in ligula eget dolor interdum tristique vel quis dolor. Donec eget nibh nec nulla aliquet fringilla. Ut non pulvinar quam. Donec vitae semper risus. Maecenas vitae convallis eros, bibendum finibus tortor. 
+		</p>
+		<p>
+			Aliquam feugiat fringilla lectus et hendrerit. Nullam suscipit condimentum mattis. Ut tempus dolor dui, at consequat nisi molestie nec. Donec in consectetur nisl. Mauris <span class="info" data-abc-tt-content="Morbi ligula massa semper sit amet placerat" data-abc-tt-position="bottom">i</span> sed neque ac nunc porttitor tristique non eu est. Vivamus pharetra augue et ipsum tincidunt, id vehicula mi lacinia. Fusce sed arcu erat. Curabitur pulvinar laoreet velit nec dignissim. 
+		</p>
+	</div>
+<script src="./abc-tooltip.js"></script>
+<script>
+	const tt1 = document.getElementById('tooltip-1');
+	new AbcTooltip({
+		target: tt1,
+		content: 'Vivamus sed placerat felis, sit amet scelerisque mi.',
+		gap: 2
+	});
+
+	const tt2 = document.getElementById('tooltip-2');
+	new AbcTooltip({
+		target: tt2,
+		content: '<i>Nulla congue</i> <b>sapien vel</b> sapien <mark>pellentesque</mark> <del>varius.</del>',
+		html: true,
+		event: 'click',
+		position: 'right',
+		gap: 2
+	});
+
+	new AbcTooltip();
+</script>
+</body>
+</html>
